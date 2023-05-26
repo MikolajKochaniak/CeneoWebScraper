@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container my-5">
+        <div class="card bg-light text-center p-4">
+            <h1 class="card-title">Enter Product Code</h1>
+            <div class="card-body">
+                <form action="/product_site" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="id" placeholder="Product code">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
