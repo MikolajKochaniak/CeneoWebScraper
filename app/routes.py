@@ -22,3 +22,6 @@ def extraction():
 @app.route("/lista_produktów")
 def productList():
     return render_template('product_list.html')
+@app.route("/produkt")
+def product():
+    return render_template('product.html')
