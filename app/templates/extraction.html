@@ -1,18 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div class="container my-5">
-    <div class="card bg-light text-center p-4">
-        <h1 class="card-title">Enter Product Code</h1>
-        <div class="card-body">
-            <form onsubmit="redirectToCeneo(event)">
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="productCode" placeholder="Product code">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <h1 class="text-center">Wprowadź kod produktu</h1>
+    <div class="form-group">
+        <form class="d-flex justify-content-center gap-3" method="POST" action="{{url_for('extraction')}}">
+            <input id="product_code" name="product_code" type="number" class="form-control" placeholder="Wprowadź kod produktu">
+            <button type="submit" class="btn btn-primary">Zatwierdź</button>
+        </form>
     </div>
 </div>
 

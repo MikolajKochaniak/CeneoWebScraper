@@ -1,65 +1,11 @@
 {% extends 'layout.html' %}
 {% block content %}
 
-<table id="example" class="table table-success table-striped">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Id opinii</th>
-            <th scope="col">Autor</th>
-            <th scope="col">Rekomendacja</th>
-            <th scope="col">Czy potwierdzone zakupem</th>
-            <th scope="col">Data opinii</th>
-            <th scope="col">Data zakupu</th>
-            <th scope="col">Przydatne</th>
-            <th scope="col">Nieprzydatne</th>
-            <th scope="col">Zawartość</th>
-            <th scope="col">Minusy</th>
-            <th scope="col">Plusy</th>
-            <th scope="col">Liczba gwiazdek</th>
-            
+<div class="table table-success table-striped">
+    <h3>{{product_code}}</h3>
+{{ opinions|safe}}
+</div>
 
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>17227237</td>
-            <td>Mareczek</td>
-            <td>Polecam</td>
-            <td>3,5/5</td>
-            <td>Opinia potwierdzona zakupem</td>
-            <td>2023-06-05 11:00:11</td>
-            <td>2023-06-11 14:34:00</td>
-            <td>0</td>
-            <td>0</td>
-            <td>fajny rower</td>
-            <td></td>
-            <td>*****</td>
-            
-
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>17181081</td>
-            <td>Andrzej Gołota</td>
-            <td>Polecam</td>
-            <td>5/5</td>
-            <td>Opinia potwierdzona zakupem</td>
-            <td>2023-06-05 11:00:11</td>
-            <td>2023-06-11 14:34:00</td>
-            <td>0</td>
-            <td>0</td>
-            <td>super rower.</td>
-            <td>"fajnie wygląda" </td>
-            <td>*****</td>
-            
-        </tr>
-
-    </tbody>
-</table>
-<button>Download .json</button>
-<button onclick="window.location='chart'">Przejdz do strony z wykresami</button>
 {% endblock %}
 {% block js %}
 <script>
